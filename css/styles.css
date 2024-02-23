@@ -1,9 +1,37 @@
 body {
   background-image: url(../images/background.jpg);
 }
-div {
+.container {
   display: flex;
   justify-content: center;
+}
+.sky {
+  position: absolute;
+}
+.sun {
+  width: 200px;
+  margin: 50px;
+  position: relative;
+  animation: sun 20s infinite;
+  animation-direction: alternate-reverse;
+  transition-delay: 1s;
+  animation-timing-function: linear;
+}
+.cloud {
+  width: 200px;
+  margin: 50px;
+  position: relative;
+  animation: cloud 3s infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+}
+.cloud-2 {
+  width: 200px;
+  margin: 50px;
+  position: relative;
+  animation: oddcloud 3s infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
 }
 .mario {
   width: 200px;
@@ -25,6 +53,33 @@ div {
   position: relative;
   animation: luigi 4s infinite;
   animation-timing-function: linear;
+}
+@keyframes sun {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  100% {
+    left: 100px;
+    top: 100px;
+  }
+}
+@keyframes cloud {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+@keyframes oddcloud {
+  0% {
+    top: 50px;
+  }
+  100% {
+    top: 0px;
+  }
 }
 @keyframes mario {
   0% {
